@@ -5,7 +5,7 @@
   <errmsg>OK</errmsg>
   <interval>0</interval>
     <entry type="predatasource">
-        <version>1485192714</version>
+        <version>1504819507</version>
         <name>APC UPS-</name>
         <displayedas>APC UPS Status</displayedas>
         <description>Monitors state of APC UPS&#39;s</description>
@@ -16,9 +16,9 @@
         <wildcardauto>true</wildcardauto>
         <wildcardpersist>false</wildcardpersist>
         <wildcardlinuxscript>ad_snmp</wildcardlinuxscript>
-        <wildcardlinuxcmdline>type=&#34;value&#34; oid=&#34;.1.3.6.1.4.1.318.1.1.1.1.1.1&#34; descOid=&#34;&#34; </wildcardlinuxcmdline>
+        <wildcardlinuxcmdline> type=&#34;value&#34; oid=&#34;.1.3.6.1.4.1.318.1.1.1.1.1.1&#34;  descOid=&#34;&#34; oid2=&#34;&#34;  </wildcardlinuxcmdline>
         <wildcardwinscript>ad_snmp</wildcardwinscript>
-        <wildcardwincmdline>type=&#34;value&#34; oid=&#34;.1.3.6.1.4.1.318.1.1.1.1.1.1&#34; descOid=&#34;&#34; </wildcardwincmdline>
+        <wildcardwincmdline> type=&#34;value&#34; oid=&#34;.1.3.6.1.4.1.318.1.1.1.1.1.1&#34;  descOid=&#34;&#34; oid2=&#34;&#34;  </wildcardwincmdline>
         <wildcardgroovyscript></wildcardgroovyscript>
         <wildcardschedule>0</wildcardschedule>
         <wildcarddisable>false</wildcarddisable>
@@ -26,9 +26,9 @@
         <agdmethod>none</agdmethod>
         <agdparams></agdparams>
         <group></group>
-        <tags></tags>
+        <tags>apc,ups,hardware</tags>
         <technology></technology>
-        <adlist><![CDATA[{"agdmethod":"none","method":"ad_snmp","agdparams":"","id":0,"filters":[],"params":{"descOid":"","oid":".1.3.6.1.4.1.318.1.1.1.1.1.1","type":"value"}}]]></adlist>
+        <adlist><![CDATA[{"agdmethod":"none","method":"ad_snmp","agdparams":"","id":0,"filters":[],"params":{"descOid":"","oid":".1.3.6.1.4.1.318.1.1.1.1.1.1","ILP":"[]","oid2":"","type":"value"}}]]></adlist>
         <schemaVersion>2</schemaVersion>
         <dataSourceType>1</dataSourceType>
         <attributes>
@@ -271,6 +271,72 @@ This started at ##START##.</alertbody>
             <maxvalue></maxvalue>
             <minvalue>0</minvalue>
             <userparam1></userparam1>
+            <userparam2></userparam2>
+            <userparam3></userparam3>
+            <iscomposite>false</iscomposite>
+            <rpn></rpn>
+            <alertTransitionIval>0</alertTransitionIval>
+            <alertClearTransitionIval>0</alertClearTransitionIval>
+        </datapoint>
+        <datapoint>
+            <name>Max_UtilityLine_Voltage</name>
+            <dataType>7</dataType>
+            <type>2</type>
+            <postprocessormethod>none</postprocessormethod>
+            <postprocessorparam></postprocessorparam>
+            <usevalue></usevalue>
+            <alertexpr></alertexpr>
+            <alertmissing>1</alertmissing>
+            <alertsubject></alertsubject>
+            <alertbody></alertbody>
+            <description>The maximum utility line voltage in tenths of VAC over the previous 1 minute period.</description>
+            <maxvalue></maxvalue>
+            <minvalue></minvalue>
+            <userparam1>.1.3.6.1.4.1.318.1.1.1.3.3.2.0</userparam1>
+            <userparam2></userparam2>
+            <userparam3></userparam3>
+            <iscomposite>false</iscomposite>
+            <rpn></rpn>
+            <alertTransitionIval>0</alertTransitionIval>
+            <alertClearTransitionIval>0</alertClearTransitionIval>
+        </datapoint>
+        <datapoint>
+            <name>Min_UtilityLine_Voltage</name>
+            <dataType>7</dataType>
+            <type>2</type>
+            <postprocessormethod>none</postprocessormethod>
+            <postprocessorparam></postprocessorparam>
+            <usevalue></usevalue>
+            <alertexpr></alertexpr>
+            <alertmissing>1</alertmissing>
+            <alertsubject></alertsubject>
+            <alertbody></alertbody>
+            <description>The minimum utility line voltage in tenths of VAC over the previous 1 minute period.</description>
+            <maxvalue></maxvalue>
+            <minvalue></minvalue>
+            <userparam1>.1.3.6.1.4.1.318.1.1.1.3.3.3.0</userparam1>
+            <userparam2></userparam2>
+            <userparam3></userparam3>
+            <iscomposite>false</iscomposite>
+            <rpn></rpn>
+            <alertTransitionIval>0</alertTransitionIval>
+            <alertClearTransitionIval>0</alertClearTransitionIval>
+        </datapoint>
+        <datapoint>
+            <name>OutputVA</name>
+            <dataType>7</dataType>
+            <type>2</type>
+            <postprocessormethod>none</postprocessormethod>
+            <postprocessorparam></postprocessorparam>
+            <usevalue></usevalue>
+            <alertexpr></alertexpr>
+            <alertmissing>1</alertmissing>
+            <alertsubject></alertsubject>
+            <alertbody></alertbody>
+            <description>The output voltage of the UPS system in tenths of VAC.</description>
+            <maxvalue></maxvalue>
+            <minvalue></minvalue>
+            <userparam1>.1.3.6.1.4.1.318.1.1.1.4.3.1.0</userparam1>
             <userparam2></userparam2>
             <userparam3></userparam3>
             <iscomposite>false</iscomposite>
